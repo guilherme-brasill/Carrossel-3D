@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #725050;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fcfcfc;
+}
+
+header {
+    background-color: rgb(0, 0, 0, 0.5);
+    color: #eedfdf;
+    height: auto;
+    padding: 50px;
+    font-size: 35px;
+    text-shadow: 20px 15px 3px black; 
+}
+
+header h1 {
+    display: flex;
+    justify-content: center;    
+}
+
+.container {
+    position: relative;/* mantem o fluxo natural da página */
+    width: 320px;
+    margin: 100px auto 0 auto;
+    perspective: 900px; 
+}
+
+
+.carrossel {
+    position: absolute; /*  */
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: rotate360 30s infinite forwards linear; /* coloca o grau de rotação o tempo e se quer que continue avançando */
+}
+
+.imagem {
+    position: absolute;
+    width: 290px;
+    height: 187px;
+    top: 40px;
+    left: 10px;
+    right: 10px;
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgb(0, 0, 0, 0.5);/* colocar sombra, inset significa que a sombra vai ser para dentro e não para fora. */
+    display: flex;
+    border: 5px rgb(166, 164, 136) solid;
+    border-radius: 8px ;
+}
+
+.imagem span {
+    margin: auto;
+    font-size: 1em;
+}
+
+@keyframes rotate360 {
+    from {
+        transform:rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(-360deg);
+    }
+}
+
+.imagem:nth-child(1) {
+    background-image: url(https://images.pexels.com/photos/982230/pexels-photo-982230.jpeg?auto=compress&cs=tinysrgb&w=300);
+    transform: rotateY(0deg) translateZ(430px);
+}
+
+.imagem:nth-child(2) {
+    background-image: url(https://images.pexels.com/photos/3220368/pexels-photo-3220368.jpeg?auto=compress&cs=tinysrgb&w=300);
+    transform: rotateY(40deg) translateZ(430px);
+}
+
+.imagem:nth-child(3) {
+    background-image: url(https://images.pexels.com/photos/704320/pexels-photo-704320.jpeg?auto=compress&cs=tinysrgb&w=300);
+    transform: rotateY(80deg) translateZ(430px);
+}
+
+.imagem:nth-child(4) {
+    background-image: url(https://images.pexels.com/photos/1301172/pexels-photo-1301172.jpeg?auto=compress&cs=tinysrgb&w=300);
+    transform: rotateY(120deg) translateZ(430px);
+}
+
+.imagem:nth-child(5) {
+    background-image: url(https://images.pexels.com/photos/927497/pexels-photo-927497.jpeg?auto=compress&cs=tinysrgb&w=300);
+    transform: rotateY(160deg) translateZ(430px);
+}
+
+.imagem:nth-child(6) {
+    background-image: url(https://images.pexels.com/photos/15256434/pexels-photo-15256434.jpeg?auto=compress&cs=tinysrgb&w=300);
+    transform: rotateY(200deg) translateZ(430px);
+}
+
+.imagem:nth-child(7) {
+    background-image: url(https://images.pexels.com/photos/247502/pexels-photo-247502.jpeg?auto=compress&cs=tinysrgb&w=400);
+    transform: rotateY(240deg) translateZ(430px);
+}
+
+.imagem:nth-child(8) {
+    background-image: url(https://images.pexels.com/photos/33284/butterfly-matting-macro-macro-photography.jpg?auto=compress&cs=tinysrgb&w=300);
+    transform: rotateY(280deg) translateZ(430px);
+}
+
+.imagem:nth-child(9) {
+    background-image: url(https://images.pexels.com/photos/65289/polar-bear-bear-teddy-sleep-65289.jpeg?auto=compress&cs=tinysrgb&w=300);
+    transform: rotateY(320deg) translateZ(430px);
+}
+
+footer { 
+    background-color: rgb(0, 0, 0, 0.8);
+    padding: 30px;
+    position: relative;
+    top: 550px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;  
+}
+
+footer p a {
+    text-decoration: none; 
+    color: white;
+    font-style: italic;
+}
+
+
